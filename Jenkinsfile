@@ -29,22 +29,17 @@ pipeline {
         }
 
         stage('Test') {
-            steps {
-                // Make sure the folder exists inside project folder
-                sh 'mkdir -p ./ApiQuicktest/TestResults'
-
-                // Run tests with JUnit logger inside project folder
-                sh 'dotnet test ./ApiQuicktest/ApiQuicktest.csproj --no-build --logger "junit;LogFilePath=./ApiQuicktest/TestResults/results.xml"'
-
-                // Debug: list contents
-                sh 'ls -l ./ApiQuicktest/TestResults'
-            }
-            post {
-                always {
-                    // Archive test results from project folder
-                    junit './ApiQuicktest/TestResults/results.xml'
-                }
-            }
+    steps {
+        sh 'mkdir -p ./ApiQuicktest/TestResults'
+        sh 'dotnet test ./ApiQuicktest/ApiQuicktest.csproj --no-build --logger "junit;LogFilePath=./ApiQuicktest/TestResults/results.xml"'
+        sh 'ls -l ./ApiQuicktest/TestResults'
+    }
+    post {
+        always {
+            junit "ApiQuicktest/TestResults/results.xml"
         }
+    }
+}
+
     }
 }
