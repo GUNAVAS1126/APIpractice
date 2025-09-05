@@ -1,7 +1,6 @@
 pipeline {
     agent any
     environment {
-        // Add dotnet to PATH so Jenkins can find it
         PATH = "/usr/local/share/dotnet:${env.PATH}"
     }
     stages {
@@ -31,17 +30,19 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'mkdir -p TestResults'
-                // Run tests with JUnit logger
-                sh 'dotnet test ./ApiQuicktest/ApiQuicktest.csproj --no-build --logger "junit;LogFilePath=TestResults/results.xml"'
-                
-                // Optional: debug to see the report file exists
-                sh 'ls -l TestResults'
+                // Make sure the folder exists inside project folder
+                sh 'mkdir -p ./ApiQuicktest/TestResults'
+
+                // Run tests with JUnit logger inside project folder
+                sh 'dotnet test ./ApiQuicktest/ApiQuicktest.csproj --no-build --logger "junit;LogFilePath=./ApiQuicktest/TestResults/results.xml"'
+
+                // Debug: list contents
+                sh 'ls -l ./ApiQuicktest/TestResults'
             }
             post {
                 always {
-                    // Archive the test results
-                    junit 'TestResults/results.xml'
+                    // Archive test results from project folder
+                    junit './ApiQuicktest/TestResults/results.xml'
                 }
             }
         }
