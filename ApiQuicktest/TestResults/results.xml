@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testsuites time="0.556" tests="3" failures="0">
+  <testsuite id="0" name="/Users/gunasekhar/VScode/ApiQuicktest/ApiQuicktest/bin/Debug/net9.0/ApiQuicktest.dll" tests="3" failures="0" time="0.556">
+    <testcase classname="ApiQuickTests.ApiTests" name="CreatePost_ShouldReturn201" time="0.3019630" />
+    <testcase classname="ApiQuickTests.ApiTests" name="DeletePost_ShouldReturn200" time="0.2374260" />
+    <testcase classname="ApiQuickTests.ApiTests" name="GetPost_ShouldReturn200" time="0.0169410" />
+  </testsuite>
+</testsuites>

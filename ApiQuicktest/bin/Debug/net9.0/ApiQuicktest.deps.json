@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v9.0": {
       "ApiQuicktest/1.0.0": {
         "dependencies": {
+          "JUnitTestLogger": "1.1.0",
           "Microsoft.NET.Test.Sdk": "17.12.0",
           "NUnit": "4.2.2",
           "NUnit.Analyzers": "4.4.0",
@@ -19,6 +20,11 @@
         }
       },
       "coverlet.collector/6.0.2": {},
+      "JUnitTestLogger/1.1.0": {
+        "dependencies": {
+          "Microsoft.TestPlatform.ObjectModel": "17.12.0"
+        }
+      },
       "Microsoft.CodeCoverage/17.12.0": {
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
@@ -316,6 +322,13 @@
       "sha512": "sha512-bJShQ6uWRTQ100ZeyiMqcFlhP7WJ+bCuabUs885dJiBEzMsJMSFr7BOyeCw4rgvQokteGi5rKQTlkhfQPUXg2A==",
       "path": "coverlet.collector/6.0.2",
       "hashPath": "coverlet.collector.6.0.2.nupkg.sha512"
+    },
+    "JUnitTestLogger/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5nIxpRXczNH2To76s/AxmgiXrfMeebLx10R8edNO4w5UNo2diCUf0kQn0qC5+WPnONCjmtzyFrHolK+b7aBemQ==",
+      "path": "junittestlogger/1.1.0",
+      "hashPath": "junittestlogger.1.1.0.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/17.12.0": {
       "type": "package",

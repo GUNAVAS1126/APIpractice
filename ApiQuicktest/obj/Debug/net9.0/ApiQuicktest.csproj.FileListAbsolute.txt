@@ -96,3 +96,5 @@
 /Users/gunasekhar/VScode/ApiQuicktest/ApiQuicktest/obj/Debug/net9.0/ApiQuicktest.pdb
 /Users/gunasekhar/VScode/ApiQuicktest/ApiQuicktest/obj/Debug/net9.0/ApiQuicktest.genruntimeconfig.cache
 /Users/gunasekhar/VScode/ApiQuicktest/ApiQuicktest/obj/Debug/net9.0/ref/ApiQuicktest.dll
+/Users/gunasekhar/VScode/ApiQuicktest/ApiQuicktest/bin/Debug/net9.0/JUnit.TestLogger.dll
+/Users/gunasekhar/VScode/ApiQuicktest/ApiQuicktest/obj/Debug/net9.0/ApiQuicktest.sourcelink.json
